@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project name="CO_20_LastStand_Blufor">
+  <Package name="Mission">
+    <Key ID="STR_missionName">
+      <English>Last stand of Camp Freedom</English>
+      <Russian>Последняя оборона Свободы</Russian>
+    </Key>
+    <Key ID="STR_author">
+      <English>Evgeny Chumichev</English>
+      <Russian>Автор Evgeny Chumichev</Russian>
+    </Key>
+    <Key ID="STR_rules">
+      <English>Rules</English>
+      <Russian>Правила</Russian>
+    </Key>
+    <Key ID="STR_rules_text">
+      <English>%1&lt;br/&gt;&lt;br/&gt;GAME MODE RULES:&lt;br/&gt;&lt;br/&gt;%2 Defend your camp against enemy attacks until evac.&lt;br/&gt;%2 Evac call will be available after %3 rounds.&lt;br/&gt;%2 If the helicopter is shot down, the "Last stand" round begins.&lt;br/&gt;%2 During the "Last stand" round the respawn is disabled.</English>
+      <Russian>%1&lt;br/&gt;&lt;br/&gt;ПРАВИЛА РЕЖИМА ИГРЫ:&lt;br/&gt;&lt;br/&gt;%2 Защищайте свой лагерь до прибытия вертолета.&lt;br/&gt;%2 Борт будет доступен после завершения %3-го раунда.&lt;br/&gt;%2 Если борт будет сбит, начнется раунд "Последний рубеж".&lt;br/&gt;%2 В раунде "Последний рубеж" возрождения отключены.</Russian>
+    </Key>
+    <Key ID="STR_SitrepText">
+      <English>Game mode:&lt;br/&gt;&lt;br/&gt;- Last Man Standing&lt;br/&gt;&lt;br/&gt;Sides:&lt;br/&gt;&lt;br/&gt;- EAST vs WEST&lt;br/&gt;&lt;br/&gt;Location:&lt;br/&gt;&lt;br/&gt;- Altis %1</English>
+      <Russian>Тип игры:&lt;br/&gt;&lt;br/&gt;- Оборона&lt;br/&gt;&lt;br/&gt;Стороны:&lt;br/&gt;&lt;br/&gt;- ВОСТОК против ЗАПАДА&lt;br/&gt;&lt;br/&gt;Локация:&lt;br/&gt;&lt;br/&gt;- Алтис %1</Russian>
+    </Key>
+    <Key ID="STR_overview_text">
+      <English>Defend your camp against enemy attacks until evac.</English>
+      <Russian>Защищайте свой лагерь от вражеских атак до прибытия эвакуационного вертолета.</Russian>
+    </Key>
+    <Key ID="STR_sector_ID">
+      <English>  FOB  </English>
+      <Russian>  БПР  </Russian>
+    </Key>
+    <Key ID="STR_sector_name">
+      <English>FOB</English>
+      <Russian>БПР</Russian>
+    </Key>
+    <Key ID="STR_West">
+      <English>West</English>
+      <Russian>Запад</Russian>
+    </Key>
+    <Key ID="STR_North">
+      <English>North</English>
+      <Russian>Север</Russian>
+    </Key>
+    <Key ID="STR_East">
+      <English>East</English>
+      <Russian>Восток</Russian>
+    </Key>
+    <Key ID="STR_South">
+      <English>South</English>
+      <Russian>Юг</Russian>
+    </Key>
+    <Key ID="STR_EP_ON">
+      <English>Earplugs</English>
+      <Russian>Беруши</Russian>
+    </Key>
+    <Key ID="STR_EP_OFF">
+      <English>Remove earplugs</English>
+      <Russian>Снять беруши</Russian>
+    </Key>
+    <Key ID="STR_textEP_ON">
+      <English>Earplugs ON</English>
+      <Russian>Беруши надеты</Russian>
+    </Key>
+    <Key ID="STR_textEP_OFF">
+      <English>Earplugs OFF</English>
+      <Russian>Беруши сняты</Russian>
+    </Key>
+    <Key ID="STR_mission_failed">
+      <English>Mission failed</English>
+      <Russian>Поражение</Russian>
+    </Key>
+    <Key ID="STR_mission_completed">
+      <English>Mission completed</English>
+      <Russian>Победа</Russian>
+    </Key>
+    <Key ID="STR_all_dead">
+      <English>Defenders is KIA</English>
+      <Russian>Морпехи погибли</Russian>
+    </Key>
+    <Key ID="STR_victory">
+      <English>MISSION COMPLETED</English>
+      <Russian>ЗАДАЧА ВЫПОЛНЕНА</Russian>
+    </Key>
+    <Key ID="STR_base_captured">
+      <English>Base is under opfor control</English>
+      <Russian>База под контролем противника</Russian>
+    </Key>
+    <Key ID="STR_rtb">
+      <English>Marines is RTB</English>
+      <Russian>Морпехи выполнили задачу</Russian>
+    </Key>
+    <Key ID="STR_Author_diary">
+      <English>Author</English>
+      <Russian>Автор</Russian>
+    </Key>
+    <Key ID="STR_info">
+      <English>Mission version</English>
+      <Russian>Версия миссии</Russian>
+    </Key>
+    <Key ID="STR_Sitrep">
+      <English>SitRep</English>
+      <Russian>Описание режима</Russian>
+    </Key>
+    <Key ID="STR_SuppRequest">
+      <English>Support requester</English>
+      <Russian>Запрос поддержки</Russian>
+    </Key>
+    <Key ID="STR_sup_info_1">
+      <English>Support call will be available after completion of current round</English>
+      <Russian>Поддержка будет доступна по завершении текущего раунда</Russian>
+    </Key>
+    <Key ID="STR_sup_info_2">
+      <English>%11 use %12 %13 command keys to open support menu</English>
+      <Russian>%11 используйте %12 %13 в командном меню чтобы открыть меню вызова поддержки</Russian>
+    </Key>
+    <Key ID="STR_JTAC_unit">
+      <English>Joint Fires Observer</English>
+      <Russian>Передовой наблюдатель-корректировщик</Russian>
+    </Key>
+    <Key ID="STR_JTAC_role">
+      <English>2: Joint Fires Observer</English>
+      <Russian>2: Наблюдатель-корректировщик</Russian>
+    </Key>
+    <Key ID="STR_B_Plane_CAS_01">
+      <English>Close air support (A-10D)</English>
+      <Russian>Авиаподдержка (A-10D)</Russian>
+    </Key>
+    <Key ID="STR_evacCall">
+      <English>Call for EVAC</English>
+      <Russian>Запросить эвакуацию</Russian>
+    </Key>
+    <Key ID="STR_artyCall">
+      <English>Fire mission</English>
+      <Russian>Запрос артиллерии</Russian>
+    </Key>
+    <Key ID="STR_supplyCall">
+      <English>Supply drop</English>
+      <Russian>Запрос сброса боеприпасов</Russian>
+    </Key>
+    <Key ID="STR_request">
+      <English>Warhawk 1-1 is Oscar Mike to your AO, ETA 2 mikes</English>
+      <Russian>Ястреб 1-1 в пути к вашей позиции, расчетное время прибытия 2 минуты</Russian>
+    </Key>
+    <Key ID="STR_supporting">
+      <English>Warhawk 1-1 On station, ready for tasking</English>
+      <Russian>Ястреб 1-1 прибыл, готов к постановке задач</Russian>
+    </Key>
+    <Key ID="STR_supported">
+      <English>Package sent, hold mark...</English>
+      <Russian>Посылка ушла, удерживайте метку...</Russian>
+    </Key>
+    <Key ID="STR_support_rtb">
+      <English>Mission completed, Warhawk 1-1 is RTB</English>
+      <Russian>Ястреб 1-1 работу закончил</Russian>
+    </Key>
+    <Key ID="STR_param_view_dist">
+      <English>View distance</English>
+      <Russian>Дальность видимости</Russian>
+    </Key>
+    <Key ID="STR_param_evacWave">
+      <English>Call for evac available after [Round]</English>
+      <Russian>Борт эвакуации доступен после [Раунд]</Russian>
+    </Key>
+    <Key ID="STR_param_tickets">
+      <English>Start tickets [Local for players]</English>
+      <Russian>Кол-во жизней игроков [Локальные настройки]</Russian>
+    </Key>
+    <Key ID="STR_param_tickets_reward">
+      <English>Reward tickets [Local for players]</English>
+      <Russian>Кол-во жизней игроков в награду за завершение раунда [Локальные настройки]</Russian>
+    </Key>
+    <Key ID="STR_param_respawn_time">
+      <English>Respawn delay</English>
+      <Russian>Время респауна</Russian>
+    </Key>
+    <Key ID="STR_param_markers">
+      <English>Players markers on map</English>
+      <Russian>Маркеры игроков на карте</Russian>
+    </Key>
+    <Key ID="STR_param_nameTags">
+      <English>Show players names</English>
+      <Russian>Имена игроков</Russian>
+    </Key>
+    <Key ID="STR_param_dummyText">
+      <English>Recommended settings:</English>
+      <Russian>Рекомендуемые настройки:</Russian>
+    </Key>
+    <Key ID="STR_param_MissionSettings">
+      <English>Settings:</English>
+      <Russian>Настройки:</Russian>
+    </Key>
+    <Key ID="STR_paramAI">
+      <English>AI Skill [Accuracy]</English>
+      <Russian>Навык ИИ [Точность]</Russian>
+    </Key>
+    <Key ID="STR_skip_time_hours">
+      <English>%1 hours later</English>
+      <Russian>%1 часов спустя</Russian>
+    </Key>
+    <Key ID="STR_settingsText">
+      <English>Third-person view is not recommended for the mission</English>
+      <Russian>Использование Вида от третьего лица не рекомендуется для миссии</Russian>
+    </Key>
+    <Key ID="STR_casHeli">
+      <English>Attack helicopter</English>
+      <Russian>Ударный вертолет</Russian>
+    </Key>
+    <Key ID="STR_requestHeli">
+      <English>Raptor One is Oscar Mike to your AO, ETA 5 mikes</English>
+      <Russian>Хищник 1 готов к выходу, расчетное время прибытия 5 минут</Russian>
+    </Key>
+    <Key ID="STR_supportingHeli">
+      <English>Raptor One on station</English>
+      <Russian>Хищник 1 прибыл, готов к работе</Russian>
+    </Key>
+    <Key ID="STR_supportedHeli">
+      <English>Mission completed, Raptor One is RTB</English>
+      <Russian>Хищник 1 работу закончил</Russian>
+    </Key>
+    <Key ID="STR_callheli_desc">
+      <English>Evacuation helicopter arrived to AO, waiting for your signal. Once called, it will need 5 minutes to reach your location.</English>
+      <Russian>Эвакуационный вертолет прибыл в район боевых действий и ожидает вашего сигнала. После вызова ему потребуется 5 минут, чтобы добраться до вас.</Russian>
+    </Key>
+    <Key ID="STR_callheli_title">
+      <English>Call evac heli</English>
+      <Russian>Вызвать вертолет</Russian>
+    </Key>
+    <Key ID="STR_wave_desc">
+      <English>Enemy forces are approaching your position. Set up a defense perimeter and repel the attack.</English>
+      <Russian>К вашей позиции приближаются силы противника. Задача: Отразить наступление сил противника, удержать базу под контролем.</Russian>
+    </Key>
+    <Key ID="STR_wave_title">
+      <English>Survive the %1 attack</English>
+      <Russian>Отразить %1 атаку</Russian>
+    </Key>
+    <Key ID="STR_evac_desc">
+      <English>The evacuation helicopter is waiting on the ground.</English>
+      <Russian>Вертолет для эвакуации на месте.</Russian>
+    </Key>
+    <Key ID="STR_evac_title">
+      <English>Get to the evac heli</English>
+      <Russian>Грузитесь в вертолет</Russian>
+    </Key>
+    <Key ID="STR_evac_marker">
+      <English>Evacuate</English>
+      <Russian>Эвакуация</Russian>
+    </Key>
+    <Key ID="STR_lastwave_desc">
+      <English>Evacuation helicopter destroyed. Survive the last enemy attack, reinforcements on the way.</English>
+      <Russian>Эвакуационный вертолет уничтожен. Отразите последнюю атаку противника, ожидайте прибытия подкрепления.</Russian>
+    </Key>
+    <Key ID="STR_lastwave_title">
+      <English>Survive the final attack</English>
+      <Russian>Пережить последнюю атаку</Russian>
+    </Key>
+    <Key ID="STR_evac_marker">
+      <English>Evacuate</English>
+      <Russian>Эвакуироваться</Russian>
+    </Key>
+    <Key ID="STR_key_fire">
+      <English>FIRE WHEN READY</English>
+      <Russian>ОГОНЬ</Russian>
+    </Key>
+    <Key ID="STR_text_grid_target">
+      <English>Target position</English>
+      <Russian>Координаты цели</Russian>
+    </Key>
+    <Key ID="STR_text_grid_FO">
+      <English>Requester position</English>
+      <Russian>Координаты ПНК</Russian>
+    </Key>
+    <Key ID="STR_key_checkFire">
+      <English>CHECK FIRE</English>
+      <Russian>ОТМЕНА</Russian>
+    </Key>
+    <Key ID="STR_key_close">
+      <English>Close</English>
+      <Russian>Закрыть</Russian>
+    </Key>
+    <Key ID="STR_key_toolTip">
+      <English>Use: [SHIFT] + [LMB]\nTo select the position</English>
+      <Russian>[SHIFT] + [LMB]\nОпределение координат цели</Russian>
+    </Key>
+    <Key ID="STR_key_header">
+      <English>Artillery support</English>
+      <Russian>Запрос артиллерии</Russian>
+    </Key>
+    <Key ID="STR_text_units">
+      <English> Units available</English>
+      <Russian>Орудие</Russian>
+    </Key>
+    <Key ID="STR_text_ammo">
+      <English> Ammunition type</English>
+      <Russian> Боеприпасы</Russian>
+    </Key>
+    <Key ID="STR_text_delay">
+      <English>- Delay</English>
+      <Russian>-Задержка</Russian>
+    </Key>
+    <Key ID="STR_text_rounds">
+      <English>- Rounds</English>
+      <Russian>-Залпов</Russian>
+    </Key>
+    <Key ID="STR_fire_support">
+      <English>Fire support</English>
+      <Russian>Доступно</Russian>
+    </Key>
+    <Key ID="STR_calls_support">
+      <English>Calls left</English>
+      <Russian>Запросов</Russian>
+    </Key>
+    <Key ID="STR_rep_units">
+      <English>Units: %1</English>
+      <Russian>Орудие: %1</Russian>
+    </Key>
+    <Key ID="STR_rep_rounds">
+      <English>Rounds: %1</English>
+      <Russian>Тип БП: %1</Russian>
+    </Key>
+    <Key ID="STR_rep_roundsN">
+      <English>Rounds number: %1</English>
+      <Russian>Залпов: %1</Russian>
+    </Key>
+    <Key ID="STR_rep_delay">
+      <English>Delay: %1</English>
+      <Russian>Задержка: %1</Russian>
+    </Key>
+    <Key ID="STR_rep_eta">
+      <English>ETA: %1 seconds</English>
+      <Russian>Время ожидания: %1</Russian>
+    </Key>
+    <Key ID="STR_req_received">
+      <English> Request received:</English>
+      <Russian>Запрос получен:</Russian>
+    </Key>
+    <Key ID="STR_req_canseled">
+      <English> fire mission request canceled</English>
+      <Russian>запрос поддержки отменен</Russian>
+    </Key>
+    <Key ID="STR_text_grid">
+      <English>GRID: %1</English>
+      <Russian>КООРД %1</Russian>
+    </Key>
+    <Key ID="STR_outro_sirep">
+      <English>SITUATION REPORT:</English>
+      <Russian>ОПЕРАТИВНАЯ СВОДКА:</Russian>
+    </Key>
+    <Key ID="STR_outro_loading">
+      <English>LOADING</English>
+      <Russian>ЗАГРУЗКА</Russian>
+    </Key>
+    <Key ID="STR_outro_date">
+      <English>DATE-%1 HOURS-%2</English>
+      <Russian>ДАТА-%1 ВРЕМЯ-%2</Russian>
+    </Key>
+    <Key ID="STR_outro_location">
+      <English>LOCATION-CAMP FREEDOM</English>
+      <Russian>ЛОКАЦИЯ-ОПОРНЫЙ ПУНКТ СВОБОДА</Russian>
+    </Key>
+    <Key ID="STR_outro_inArea">
+      <English>IN AREA:</English>
+      <Russian>В СЕКТОРЕ:</Russian>
+    </Key>
+    <Key ID="STR_outro_inAreaEast">
+      <English>EAST-%1</English>
+      <Russian>ВОСТОК-%1</Russian>
+    </Key>
+    <Key ID="STR_outro_inAreaWest">
+      <English>WEST-%1</English>
+      <Russian>ЗАПАД-%1</Russian>
+    </Key>
+    <Key ID="STR_outro_control">
+      <English>THE AREA IS SECURE</English>
+      <Russian>ЗАПАД КОНТРОЛИРУЕТ ТЕРРИТОРИЮ</Russian>
+    </Key>
+    <Key ID="STR_introMission">
+      <English>Mission: Last stand of Camp Freedom</English>
+      <Russian>Миссия: Последняя оборона Свободы</Russian>
+    </Key>
+    <Key ID="STR_introGM">
+      <English>Game mode: Last man standing</English>
+      <Russian>Режим игры: Оборона</Russian>
+    </Key>
+    <Key ID="STR_introSIDES">
+      <English>Sides: West vs East</English>
+      <Russian>Стороны: ВОСТОК против ЗАПАДА</Russian>
+    </Key>
+    <Key ID="STR_introRules">
+      <English>- Defend your camp against enemy attacks until evac.&lt;br/&gt;- Evac call will be available after %1 rounds.&lt;br/&gt;- If the helicopter is shot down, the 'Last stand' round begins.&lt;br/&gt;- During the 'Last stand' round the respawn is disabled.</English>
+      <Russian>- Защищайте свой лагерь до прибытия вертолета.&lt;br/&gt;- Борт будет доступен после завершения %1-го раунда.&lt;br/&gt;- Если борт будет сбит, начнется раунд "Последний рубеж".&lt;br/&gt;- В раунде "Последний рубеж" возрождения отключены.</Russian>
+    </Key>
+  </Package>
+</Project>

@@ -136,7 +136,7 @@
 })
 
 /*--------------------------------------------------------------------------------------------------
-  UI SETTINGS 
+  UI SETTINGS
 --------------------------------------------------------------------------------------------------*/
 
 #define CTRL_W_X      safeZoneWAbs + safeZoneXAbs
@@ -149,9 +149,9 @@
 #define CTRL_EP_Y 		(safezoneY + safezoneH - 27 * (((CTRL_WH min 1.2) / 1.2) / 25))
 #define CTRL_SKIP     [0.396875 * CTRL_W_X, 0.731 * CTRL_H_Y, 0.20625 * safeZoneWAbs, 0.02485 * safezoneH]
 
-#define CTRL_W 				 1.75  
-#define CTRL_H 				 1.15  
-#define CTRL_X 				 ((safeZoneXAbs + (safeZoneWAbs / 2)) - (CTRL_W / 2))  
+#define CTRL_W 				 1.75
+#define CTRL_H 				 1.15
+#define CTRL_X 				 ((safeZoneXAbs + (safeZoneWAbs / 2)) - (CTRL_W / 2))
 #define CTRL_Y 				 ((safeZoneY + safeZoneH) - CTRL_H)
 
 #define MISSION_DISPLAY      (findDisplay 46)
@@ -174,38 +174,38 @@
   "<img image='\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa' align='left' valign='true'/>"\
 )
 
-#define CTRL_TEXT_FIRE		 localize "STR_key_fire"			  
-#define CTRL_TEXT_TPOS		 localize "STR_text_grid_target" 
-#define CTRL_TEXT_RPOS		 localize "STR_text_grid_FO"	 
-#define CTRL_TEXT_CHECK		 localize "STR_key_checkFire"	 
-#define CTRL_TT_CLOSE      localize "STR_key_close"				
-#define CTRL_TT_TEXT_LMB	 localize "STR_key_toolTip" 
+#define CTRL_TEXT_FIRE		 localize "STR_key_fire"
+#define CTRL_TEXT_TPOS		 localize "STR_text_grid_target"
+#define CTRL_TEXT_RPOS		 localize "STR_text_grid_FO"
+#define CTRL_TEXT_CHECK		 localize "STR_key_checkFire"
+#define CTRL_TT_CLOSE      localize "STR_key_close"
+#define CTRL_TT_TEXT_LMB	 localize "STR_key_toolTip"
 
-#define CTRL_HEADER_TEXT	 format ["<t align='left' size='1' font='PuristaMedium' color='#ffffff'>%1</t>", localize "STR_key_header"] 
-#define CTRL_UNITS_TEXT		 format ["<t align='right' size='0.85' font='PuristaMedium'>%1</t>",localize "STR_text_units"] + "<br/>" 
-#define CTRL_AMMO_TYPE		 format ["<t align='right' size='0.85' font='PuristaMedium'>%1</t>",localize "STR_text_ammo"]		
-#define CTRL_DELAY_TEXT		 format ["<t align='left' size='0.85' font='PuristaMedium'>%1</t>",localize "STR_text_delay"] + "<br/>"		
-#define CTRL_ROUNDS_TEXT	 format ["<t align='left' size='0.85' font='PuristaMedium'>%1</t>",localize "STR_text_rounds"]			
-#define CTRL_FSUPP_TEXT		 format ["<t align='left' size='0.85' font='PuristaMedium'>%1</t>",localize "STR_fire_support"] + "<br/>"		
+#define CTRL_HEADER_TEXT	 format ["<t align='left' size='1' font='PuristaMedium' color='#ffffff'>%1</t>", localize "STR_key_header"]
+#define CTRL_UNITS_TEXT		 format ["<t align='right' size='0.85' font='PuristaMedium'>%1</t>",localize "STR_text_units"] + "<br/>"
+#define CTRL_AMMO_TYPE		 format ["<t align='right' size='0.85' font='PuristaMedium'>%1</t>",localize "STR_text_ammo"]
+#define CTRL_DELAY_TEXT		 format ["<t align='left' size='0.85' font='PuristaMedium'>%1</t>",localize "STR_text_delay"] + "<br/>"
+#define CTRL_ROUNDS_TEXT	 format ["<t align='left' size='0.85' font='PuristaMedium'>%1</t>",localize "STR_text_rounds"]
+#define CTRL_FSUPP_TEXT		 format ["<t align='left' size='0.85' font='PuristaMedium'>%1</t>",localize "STR_fire_support"] + "<br/>"
 #define CTRL_CALLS_TEXT		 format ["<t align='left' size='0.85' font='PuristaMedium'>%1 %2</t>",localize "STR_calls_support",GET_VAR("calls_left",5)]
 
 #define CTRL_CALL_ICON    "<img image='\a3\ui_f\data\gui\cfg\Hints\CallSupport_CA.paa' align='left' size='1.88'/>"
 #define CTRL_ICON_LINES   "<t align='left' size='1.15' font='PuristaLight' color='#a8a8a8'>ııllı</t>"
 
-#define HINT_TEXT_UNITS   format ["<t align='left' font='PuristaMedium'>%1</t>",localize "STR_rep_units"]  
-#define HINT_TEXT_ROUNDS  format ["<t align='left' font='PuristaMedium'>%1</t>",localize "STR_rep_rounds"]  
-#define HINT_TEXT_NROUNDS format ["<t align='left' font='PuristaMedium'>%1</t>",localize "STR_rep_roundsN"] 
-#define HINT_TEXT_DELAY		format ["<t align='left' font='PuristaMedium'>%1</t>",localize "STR_rep_delay"]    
-#define HINT_TEXT_ETA     format ["<t align='left' font='PuristaMedium'>%1</t>",localize "STR_rep_eta"] 
-#define HINT_ICON_TEXT    format ["<t align='left' font='PuristaMedium'>%1</t>",localize "STR_req_received"] 
+#define HINT_TEXT_UNITS   format ["<t align='left' font='PuristaMedium'>%1</t>",localize "STR_rep_units"]
+#define HINT_TEXT_ROUNDS  format ["<t align='left' font='PuristaMedium'>%1</t>",localize "STR_rep_rounds"]
+#define HINT_TEXT_NROUNDS format ["<t align='left' font='PuristaMedium'>%1</t>",localize "STR_rep_roundsN"]
+#define HINT_TEXT_DELAY		format ["<t align='left' font='PuristaMedium'>%1</t>",localize "STR_rep_delay"]
+#define HINT_TEXT_ETA     format ["<t align='left' font='PuristaMedium'>%1</t>",localize "STR_rep_eta"]
+#define HINT_ICON_TEXT    format ["<t align='left' font='PuristaMedium'>%1</t>",localize "STR_req_received"]
 
 #define HINT_ICON_UNITS   "<img image='\a3\ui_f\data\GUI\Cfg\CommunicationMenu\artillery_ca.paa' align='left' size='1.15'/>"
-#define HINT_TEXT_GRID    "<t align='left' font='PuristaMedium'>%1</t>"		
+#define HINT_TEXT_GRID    "<t align='left' font='PuristaMedium'>%1</t>"
 
 #define SCORCHER_NAME		 (getText (configFile >> "CfgVehicles" >> "B_T_MBT_01_arty_F" >> "DisplayName"))
 #define MORTAR_NAME			 (getText (configFile >> "CfgVehicles" >> "B_T_Mortar_01_F" >> "DisplayName"))
 
-#define LB_UNITS_LIST     [SCORCHER_NAME,MORTAR_NAME]  
+#define LB_UNITS_LIST     [SCORCHER_NAME,MORTAR_NAME]
 #define LB_ROUNS_LIST_A   ["155 mm HE","155 mm DPICM"]
 #define LB_ROUNS_LIST_B   ["82 mm HE","82 mm Smoke","82 mm ILLUM"]
 #define LB_NUMBER_LIST_A  ["1","2","3","4","5","6","7","8","9","10"]
@@ -280,7 +280,7 @@
 
 #define CTRL_HIDE(A)\
   A ctrlSetFade 1; A ctrlCommit 0;
-  
+
 #define OUTRO_AI_LIST [\
   "Private Ryan Lee","Sergeant Oliver Griffiths","Corporal Andy Evans","Staff Sergeant Jack Jackson","Corporal Nathan O'Connor",\
   "Private Paul Jackson","Staff Sergeant Ryan Davies","Private John Evans","Staff Sergeant Thomas Snowe","Sergeant Sean Miller",\
@@ -289,7 +289,7 @@
 ]
 
 /*--------------------------------------------------------------------------------------------------
-  ICONS / MARKERS 
+  ICONS / MARKERS
 --------------------------------------------------------------------------------------------------*/
 
 #define SIZE_F          0.035
@@ -334,7 +334,7 @@
 ]
 
 /*--------------------------------------------------------------------------------------------------
-  MODULE SECTOR 
+  MODULE SECTOR
 --------------------------------------------------------------------------------------------------*/
 
 #define SECTOR_OWNER_CHANGED  "_this call SL_fnc_sectorCaptured"
@@ -354,7 +354,7 @@
 #define COST_TRACKED          0.45
 #define COST_WATER            0
 #define COST_AIR              0
-#define COST_PLAYERS          "2.25" 
+#define COST_PLAYERS          "2.25"
 #define CAP_COEFICENT         0.05
 
 #define SET_SECTOR(A) (call {\
@@ -385,8 +385,8 @@
   TASKS TITLES / DESCRIPTIONS / SUPPORTS MESSAGES
 --------------------------------------------------------------------------------------------------*/
 
-#define TASK_LWAVE_DESC   ["STR_lastwave_desc", "STR_lastwave_title", "STR_evac_marker"]			
-#define TASK_EVAC_DESC    ["STR_evac_desc", "STR_evac_title", "STR_evac_marker"]	
+#define TASK_LWAVE_DESC   ["STR_lastwave_desc", "STR_lastwave_title", "STR_evac_marker"]
+#define TASK_EVAC_DESC    ["STR_evac_desc", "STR_evac_title", "STR_evac_marker"]
 #define TASK_CALL_DESC    ["STR_callheli_desc", "STR_callheli_title", ""]
 #define TASK_WAVE_DESC    "STR_wave_desc"
 #define TASK_WAVE_TITLE   "STR_wave_title"

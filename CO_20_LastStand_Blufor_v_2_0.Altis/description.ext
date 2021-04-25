@@ -151,8 +151,8 @@ class CfgCommunicationMenu {
     submenu     = "";
     expression  = "GVAR_evac = 1; publicVariable 'GVAR_evac'; [] remoteExec ['SL_fnc_evac', 2];";
     icon        = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\transport_ca.paa";
-    cursor 	   	= "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
-    enable 	   	= "1";
+    cursor      = "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
+    enable      = "1";
     removeAfterExpressionCall = 1;
   };
 };

@@ -16,7 +16,7 @@ class Header {
   maxPlayers = 20;
 };
 
-author 					= __EVAL(AUTHOR_TXT);
+author          = __EVAL(AUTHOR_TXT);
 briefingName    = __EVAL(BRIEF_TXT);
 onLoadName 			= __EVAL(MISS_NAME);
 onLoadMission   = __EVAL(LOAD_TXT);
@@ -35,7 +35,7 @@ maxScore 				= 500;
 respawnTemplates[] = {"MenuInventory", "MenuPosition", "Tickets", "Spectator"};
 disableRandomization[] = {"AllVehicles"};
 
-class CfgDebriefing {  
+class CfgDebriefing {
   class End1 {
     title 			  		= $STR_mission_completed;
     description 	  	= "";
@@ -44,7 +44,7 @@ class CfgDebriefing {
     pictureColor[] 	  = {1,1,1,1};
     pictureBackground = "\a3\ui_f\data\gui\cfg\LoadingScreens\gc_wallpaper_17_co.paa";
   };
-  
+
   class End2 {
     title 			  		= $STR_mission_failed;
     description 	  	= "";
@@ -53,7 +53,7 @@ class CfgDebriefing {
     pictureColor[] 	  = {1,1,1,1};
     pictureBackground = "\a3\ui_f\data\gui\cfg\LoadingScreens\gc_wallpaper_17_co.paa";
   };
-  
+
   class End3 {
     title 			  		= $STR_mission_failed;
     description 	  	= "";
@@ -62,7 +62,7 @@ class CfgDebriefing {
     pictureColor[] 	  = {1,1,1,1};
     pictureBackground = "\a3\ui_f\data\gui\cfg\LoadingScreens\gc_wallpaper_17_co.paa";
   };
-  
+
   class End4 {
     title 			  		= $STR_mission_completed;
     description 	  	= "";
@@ -81,8 +81,8 @@ titleParam2 = $STR_param_MissionSettings;
 valuesParam2[] = {0};
 textsParam2[] = {"  "};
 
-class Params { 
-  #include "missionParams.hpp" 
+class Params {
+  #include "missionParams.hpp"
 };
 
 class CfgHints {
@@ -102,7 +102,7 @@ class CfgHints {
 
 class CfgPostprocessTemplates {
   class introPPTemplate {
-    displayName = "SL_introTemplate";	
+    displayName = "SL_introTemplate";
     colorCorrections[] = {1, 0.65, 0, {1, 1, 1, 0.05}, {0.8, 0.8, 0.8, 0.5}, {1, 1, 1, 1.0}};
     filmGrain[] = {0.75, 1, 1.25, 0, 1};
   };
@@ -111,48 +111,48 @@ class CfgPostprocessTemplates {
 class CfgCommunicationMenu {
   class supplyDrop {
     text= $STR_supplyCall;
-    submenu			= ""; 
+    submenu			= "";
     expression 	= "_this remoteExec ['SL_fnc_addSupply', 2]";
-    icon 	   		= "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa"; 
+    icon 	   		= "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa";
     cursor			= "\a3\Ui_f\data\IGUI\Cfg\Cursors\freelook_ca.paa";
     enable			= "1";
-    removeAfterExpressionCall = 1; 
+    removeAfterExpressionCall = 1;
   };
   class fireMission {
       text				= $STR_artyCall;
       submenu    	= "";
-      expression 	= "_this call SL_fnc_addArty"; 
-      icon 	   		= "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\artillery_ca.paa"; 
+      expression 	= "_this call SL_fnc_addArty";
+      icon 	   		= "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\artillery_ca.paa";
       cursor 	   	= "\a3\Ui_f\data\IGUI\Cfg\Cursors\me_ca.paa";
       enable 	   	= "1";
-      removeAfterExpressionCall = 0; 
-  };	
+      removeAfterExpressionCall = 0;
+  };
   class casPlane {
       text				= $STR_B_Plane_CAS_01;
       submenu    	= "";
-      expression 	= "_this remoteExec ['SL_fnc_addCAS', 2]"; 
-      icon				= "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\cas_ca.paa"; 
+      expression 	= "_this remoteExec ['SL_fnc_addCAS', 2]";
+      icon				= "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\cas_ca.paa";
       cursor 	   	= "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
       enable 	   	= "1";
-      removeAfterExpressionCall = 1; 
+      removeAfterExpressionCall = 1;
   };
   class casHeli {
       text				= $STR_casHeli;
       submenu    	= "";
-      expression 	= "_this remoteExec ['SL_fnc_addCasHeli', 2]"; 
-      icon 	   		= "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\casheli_ca.paa"; 
+      expression 	= "_this remoteExec ['SL_fnc_addCasHeli', 2]";
+      icon 	   		= "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\casheli_ca.paa";
       cursor 	   	= "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
       enable 	   	= "1";
-      removeAfterExpressionCall = 1; 
-  };		
+      removeAfterExpressionCall = 1;
+  };
   class evacHelo {
     text 	   		= $STR_evacCall;
-    submenu    	= ""; 
+    submenu    	= "";
     expression 	= "GVAR_evac = 1; publicVariable 'GVAR_evac'; [] remoteExec ['SL_fnc_evac', 2];";
-    icon 	   		= "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\transport_ca.paa"; 
+    icon 	   		= "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\transport_ca.paa";
     cursor 	   	= "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
     enable 	   	= "1";
-    removeAfterExpressionCall = 1; 
+    removeAfterExpressionCall = 1;
   };
 };
 
@@ -162,7 +162,7 @@ class CfgFunctions {
       file ="functions";
       class evac {};
       class raid {};
-      class intro {};			
+      class intro {};
       class addCAS {};
       class static {};
       class flares {};
@@ -172,7 +172,7 @@ class CfgFunctions {
       class unitInit {};
       class coverMap {};
       class skipTime {};
-      class earPlugs {};			
+      class earPlugs {};
       class typeTextX {};
       class lastStand {};
       class playMusic {};
@@ -190,16 +190,16 @@ class CfgFunctions {
       class missionOutro {};
       class resetTickets {};
       class moduleSector {};
-      class splendidShot {};			
-      class initInventory {};					
+      class splendidShot {};
+      class initInventory {};
       class conversations {};
       class sectorCaptured {};
       class supportProvider {};
-      class respawnInventory {};			
+      class respawnInventory {};
       class createVehicleCrew {};
       class respawnInventoryAdd {};
-      class respawnPositionAdd {};	
-    };  
+      class respawnPositionAdd {};
+    };
   };
 };
 

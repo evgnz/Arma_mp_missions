@@ -1,74 +1,75 @@
 #include "cfgInventory.hpp"
-#define AUTHOR_TXT 	localize "STR_author"
-#define BRIEF_TXT 	localize "STR_missionName"
-#define MISS_NAME 	localize "STR_missionName"
-#define LOAD_TXT  	localize "STR_overview_text"
-#define LOAD_IMG_W 	width="500"
-#define LOAD_IMG_H 	height="260"
-#define LOAD_IMG   	"\a3\ui_f\data\GUI\Rsc\RscDisplayWelcome\welcome_nexus3_ca.paa"
-#define PREV_IMG_0 	"\a3\ui_f\data\GUI\Rsc\RscDisplayWelcome\welcome3_ca.paa"
-#define PREV_IMG_1 	"\a3\ui_f\data\GUI\cfg\LoadingScreens\gc_wallpaper_16_co.paa"
-#define PREV_IMG_2 	"\a3\ui_f\data\GUI\cfg\LoadingScreens\gc_wallpaper_17_co.paa"
+
+#define AUTHOR_TXT    localize "STR_author"
+#define BRIEF_TXT     localize "STR_missionName"
+#define MISS_NAME     localize "STR_missionName"
+#define LOAD_TXT      localize "STR_overview_text"
+#define LOAD_IMG_W    width="500"
+#define LOAD_IMG_H    height="260"
+#define LOAD_IMG_H    "\a3\ui_f\data\GUI\Rsc\RscDisplayWelcome\welcome_nexus3_ca.paa"
+#define PREV_IMG_0    "\a3\ui_f\data\GUI\Rsc\RscDisplayWelcome\welcome3_ca.paa"
+#define PREV_IMG_1    "\a3\ui_f\data\GUI\cfg\LoadingScreens\gc_wallpaper_16_co.paa"
+#define PREV_IMG_2    "\a3\ui_f\data\GUI\cfg\LoadingScreens\gc_wallpaper_17_co.paa"
 
 class Header {
-  gameType   = LastMan;
-  minPlayers = 1;
-  maxPlayers = 20;
+  gameType    =LastMan;
+  minPlayers  = 1;
+  maxPlayers  = 20;
 };
 
 author          = __EVAL(AUTHOR_TXT);
 briefingName    = __EVAL(BRIEF_TXT);
-onLoadName 			= __EVAL(MISS_NAME);
+onLoadName      = __EVAL(MISS_NAME);
 onLoadMission   = __EVAL(LOAD_TXT);
 overviewText    = __EVAL(LOAD_TXT);
 overViewPicture = __EVAL(selectRandom [LOAD_IMG, PREV_IMG_0, PREV_IMG_1, PREV_IMG_2]);
 loadScreen      = LOAD_IMG; LOAD_IMG_W; LOAD_IMG_H;
 saving          = 0;
 disabledAI      = 1;
-respawn 				= 3;
-respawnDelay 		= 5;
-respawnOnStart 	= 1;
-minScore 				= 0;
-avgScore 				= 100;
-maxScore 				= 500;
+respawn         = 3;
+respawnDelay    = 5;
+respawnOnStart  = 1;
+minScore        = 0;
+avgScore        = 100;
+maxScore        = 500;
 
 respawnTemplates[] = {"MenuInventory", "MenuPosition", "Tickets", "Spectator"};
 disableRandomization[] = {"AllVehicles"};
 
 class CfgDebriefing {
   class End1 {
-    title 			  		= $STR_mission_completed;
-    description 	  	= "";
-    subtitle 		  		= "";
-    picture 		  		= "\a3\ui_f\data\gui\cfg\Hints\commanding_ca.paa";
-    pictureColor[] 	  = {1,1,1,1};
+    title             = $STR_mission_completed;
+    description       = "";
+    subtitle          = "";
+    picture           = "\a3\ui_f\data\gui\cfg\Hints\commanding_ca.paa";
+    pictureColor[]    = {1,1,1,1};
     pictureBackground = "\a3\ui_f\data\gui\cfg\LoadingScreens\gc_wallpaper_17_co.paa";
   };
 
   class End2 {
-    title 			  		= $STR_mission_failed;
-    description 	  	= "";
-    subtitle 		  		= $STR_all_dead;
-    picture 		  		= "\a3\ui_f\data\gui\cfg\Debriefing\enddeath_ca.paa";
-    pictureColor[] 	  = {1,1,1,1};
+    title             = $STR_mission_failed;
+    description       = "";
+    subtitle          = $STR_all_dead;
+    picture           = "\a3\ui_f\data\gui\cfg\Debriefing\enddeath_ca.paa";
+    pictureColor[]    = {1,1,1,1};
     pictureBackground = "\a3\ui_f\data\gui\cfg\LoadingScreens\gc_wallpaper_17_co.paa";
   };
 
   class End3 {
-    title 			  		= $STR_mission_failed;
-    description 	  	= "";
-    subtitle 		  		= $STR_base_captured;
-    picture 		  		= "\a3\ui_f\data\gui\cfg\Debriefing\enddefault_ca.paa";
-    pictureColor[] 	  = {1,1,1,1};
+    title             = $STR_mission_failed;
+    description       = "";
+    subtitle          = $STR_base_captured;
+    picture           = "\a3\ui_f\data\gui\cfg\Debriefing\enddefault_ca.paa";
+    pictureColor[]    = {1,1,1,1};
     pictureBackground = "\a3\ui_f\data\gui\cfg\LoadingScreens\gc_wallpaper_17_co.paa";
   };
 
   class End4 {
-    title 			  		= $STR_mission_completed;
-    description 	  	= "";
-    subtitle 		  		= $STR_rtb;
-    picture 		  		= "\a3\ui_f\data\gui\cfg\Hints\competitiverules_ca.paa";
-    pictureColor[] 	  = {1,1,1,1};
+    title             = $STR_mission_completed;
+    description       = "";
+    subtitle          = $STR_rtb;
+    picture           = "\a3\ui_f\data\gui\cfg\Hints\competitiverules_ca.paa";
+    pictureColor[]    = {1,1,1,1};
     pictureBackground = "\a3\ui_f\data\gui\cfg\LoadingScreens\gc_wallpaper_17_co.paa";
   };
 };
@@ -89,13 +90,13 @@ class CfgHints {
   class Support {
     displayName = "Support requester";
     class CallSupport {
-      displayName      = $STR_JTAC_unit;
-      displayNameShort = "";
-      description      = $STR_sup_info_1;
-      tip              = $STR_sup_info_2;
-      arguments[]      = {profileName,{{0x0B}},{{0x09}}};
-      image            = "\a3\ui_f\data\gui\cfg\Hints\callsupport_ca.paa";
-      noImage          = false;
+      displayName       = $STR_JTAC_unit;
+      displayNameShort  = "";
+      description       = $STR_sup_info_1;
+      tip               = $STR_sup_info_2;
+      arguments[]       = {profileName,{{0x0B}},{{0x09}}};
+      image             = "\a3\ui_f\data\gui\cfg\Hints\callsupport_ca.paa";
+      noImage           = false;
     };
   };
 };
@@ -111,45 +112,45 @@ class CfgPostprocessTemplates {
 class CfgCommunicationMenu {
   class supplyDrop {
     text= $STR_supplyCall;
-    submenu			= "";
-    expression 	= "_this remoteExec ['SL_fnc_addSupply', 2]";
-    icon 	   		= "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa";
-    cursor			= "\a3\Ui_f\data\IGUI\Cfg\Cursors\freelook_ca.paa";
-    enable			= "1";
+    submenu     = "";
+    expression  = "_this remoteExec ['SL_fnc_addSupply', 2]";
+    icon        = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa";
+    cursor      = "\a3\Ui_f\data\IGUI\Cfg\Cursors\freelook_ca.paa";
+    enable      = "1";
     removeAfterExpressionCall = 1;
   };
   class fireMission {
-      text				= $STR_artyCall;
-      submenu    	= "";
-      expression 	= "_this call SL_fnc_addArty";
-      icon 	   		= "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\artillery_ca.paa";
-      cursor 	   	= "\a3\Ui_f\data\IGUI\Cfg\Cursors\me_ca.paa";
-      enable 	   	= "1";
+      text        = $STR_artyCall;
+      submenu     = "";
+      expression  = "_this call SL_fnc_addArty";
+      icon        = "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\artillery_ca.paa";
+      cursor      = "\a3\Ui_f\data\IGUI\Cfg\Cursors\me_ca.paa";
+      enable      = "1";
       removeAfterExpressionCall = 0;
   };
   class casPlane {
-      text				= $STR_B_Plane_CAS_01;
-      submenu    	= "";
-      expression 	= "_this remoteExec ['SL_fnc_addCAS', 2]";
-      icon				= "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\cas_ca.paa";
-      cursor 	   	= "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
-      enable 	   	= "1";
+      text        = $STR_B_Plane_CAS_01;
+      submenu     = "";
+      expression  = "_this remoteExec ['SL_fnc_addCAS', 2]";
+      icon        = "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\cas_ca.paa";
+      cursor      = "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
+      enable      = "1";
       removeAfterExpressionCall = 1;
   };
   class casHeli {
-      text				= $STR_casHeli;
-      submenu    	= "";
-      expression 	= "_this remoteExec ['SL_fnc_addCasHeli', 2]";
-      icon 	   		= "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\casheli_ca.paa";
-      cursor 	   	= "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
-      enable 	   	= "1";
+      text        = $STR_casHeli;
+      submenu     = "";
+      expression  = "_this remoteExec ['SL_fnc_addCasHeli', 2]";
+      icon        = "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\casheli_ca.paa";
+      cursor      = "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
+      enable      = "1";
       removeAfterExpressionCall = 1;
   };
   class evacHelo {
-    text 	   		= $STR_evacCall;
-    submenu    	= "";
-    expression 	= "GVAR_evac = 1; publicVariable 'GVAR_evac'; [] remoteExec ['SL_fnc_evac', 2];";
-    icon 	   		= "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\transport_ca.paa";
+    text        = $STR_evacCall;
+    submenu     = "";
+    expression  = "GVAR_evac = 1; publicVariable 'GVAR_evac'; [] remoteExec ['SL_fnc_evac', 2];";
+    icon        = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\transport_ca.paa";
     cursor 	   	= "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
     enable 	   	= "1";
     removeAfterExpressionCall = 1;
@@ -203,7 +204,7 @@ class CfgFunctions {
   };
 };
 
-ReviveMode											= 1;   // 0: disabled, 1: enabled, 2: controlled by player attributes
+ReviveMode                      = 1;   // 0: disabled, 1: enabled, 2: controlled by player attributes
 ReviveUnconsciousStateMode     	= 1;   // 0: basic, 1: advanced, 2: realistic
 ReviveRequiredTrait            	= 1;   // 0: none, 1: medic trait is required
 ReviveRequiredItems            	= 2;   // 0: none, 1: medkit, 2: medkit or first aid kit

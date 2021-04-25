@@ -3,16 +3,16 @@
 --------------------------------------------------------------------------------------------------*/
 
 #define RANDOM_POS        [[13567.1,21369.4,0],[13867.9,21665.7,0],[14284.9,20855.9,0],[13925.6,21524.7,0]]
-#define POS_LIST 	   		  [[13567.1,21369.4,0],[13867.9,21665.7,0],[14284.9,20855.9,0],[13925.6,21524.7,0]]
-#define INF_POS		   		  [[13567.1,21369.4,0],[13867.9,21665.7,0],[14284.9,20855.9,0],[13925.6,21524.7,0]]
-#define ARMOR_POS	   		  [[13213,21390.1,0],[14207.3,20432.1,0],[15042.7,20979.9,3.43323e-005],[15117.4,21941.5,1.14441e-005]]
-#define TRANSPORT_POS  		[[14164.4,21747.2,-1.52588e-005],[13295.2,21255,0],[14475.8,20496.6,0],[14898.1,21180.3,-1.52588e-005]]
-#define BASE_CRATES_POS		[[14191.2,21205.3,0.00900269],[14223.3,21238.9,-0.000831604],[14176.2,21223.6,0],[14117.5,21276.3,0]]
+#define POS_LIST          [[13567.1,21369.4,0],[13867.9,21665.7,0],[14284.9,20855.9,0],[13925.6,21524.7,0]]
+#define INF_POS           [[13567.1,21369.4,0],[13867.9,21665.7,0],[14284.9,20855.9,0],[13925.6,21524.7,0]]
+#define ARMOR_POS         [[13213,21390.1,0],[14207.3,20432.1,0],[15042.7,20979.9,3.43323e-005],[15117.4,21941.5,1.14441e-005]]
+#define TRANSPORT_POS     [[14164.4,21747.2,-1.52588e-005],[13295.2,21255,0],[14475.8,20496.6,0],[14898.1,21180.3,-1.52588e-005]]
+#define BASE_CRATES_POS   [[14191.2,21205.3,0.00900269],[14223.3,21238.9,-0.000831604],[14176.2,21223.6,0],[14117.5,21276.3,0]]
 
-#define SORTED_VEHICLES	  ((entities "LandVehicle") - [st_1,st_2,st_3,st_4,st_5])
-#define MISSION_OBJECTS		(entities [["CAManBase", "LandVehicle"], ["SoldierWB", "Car_F", "Tank_F", "Air"]]) select {side _x isEqualTo east}
-#define WP_HOLDERS		 	  (nearestObjects [SECTOR_POS, ["WeaponHolder", "GroundWeaponHolder", "WeaponHolderSimulated"], 1000])
-#define GARBAGE_LIST		  (WP_HOLDERS + allDead)
+#define SORTED_VEHICLES   ((entities "LandVehicle") - [st_1,st_2,st_3,st_4,st_5])
+#define MISSION_OBJECTS   (entities [["CAManBase", "LandVehicle"], ["SoldierWB", "Car_F", "Tank_F", "Air"]]) select {side _x isEqualTo east}
+#define WP_HOLDERS        (nearestObjects [SECTOR_POS, ["WeaponHolder", "GroundWeaponHolder", "WeaponHolderSimulated"], 1000])
+#define GARBAGE_LIST      (WP_HOLDERS + allDead)
 
 #define ALIVE_PLAYERS	   	  (allUnits select {isPlayer _x})
 #define ALL_PLAYERS         ((allUnits + allDeadMen) select {isPlayer _x})
